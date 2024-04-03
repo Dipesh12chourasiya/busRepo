@@ -1,17 +1,13 @@
-import React from 'react'
-import '../App.css'
+import React from "react";
 
 const Header = () => {
   return (
-    <>
+    <div className="bg-blue-700 flex items-center justify-center p-[1rem]">
+      <h1 className=" text-lg font-semibold text-white text-[2rem]">
+        Bus Ticket Booking App
+      </h1>
+    </div>
+  );
+};
 
-    <p className="p-4 bg-red-300 ">
-            <h1 className='text-4xl font-bold text-center'>Bus ticket Booking App</h1>
-    </p>
-    </>
-  )
-}
-
-export default Header
-
-
+export default Header;
