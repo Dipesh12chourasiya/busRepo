@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-     <p>this is me  </p>
-     <p>thi is grce</p>
+     <p className='bg-red-500'>this is me  </p>
+     <p>thi is grace</p>
     </>
   )
 }
