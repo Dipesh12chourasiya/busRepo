@@ -8,5 +8,10 @@ export default {
     extend: {},
   },
   plugins: [],
+  extend: {
+    backgroundColor: {
+      'aqua': '#00FFFF',
+    },
+  }  
 }
 
