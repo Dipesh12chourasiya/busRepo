@@ -4,6 +4,7 @@ import { locations, Buses } from "../utils/index";
 import BusList from "./BusList";
 
 export default function BusSearch({ searchState, setSearchState }) {
+  // state for finding bus by search input
   const [filteredBus, setFilteredBus] = useState(null);
 
   const handleSearch = () => {
@@ -18,11 +19,13 @@ export default function BusSearch({ searchState, setSearchState }) {
   };
 
   return (
+    // adding tailwind classes directly for styling
     <div className="bg-white p-[1rem] rounded-md shadow-md text-center">
-      <h2 className="font-semibold font-serif">Search for Buses</h2>
+      <h2 className="font-semibold text-[24px] font-serif">Search for Buses</h2>
       <div className="flex flex-col items-center">
         <div className="w-[300px] mt-4">
           <label className="text-lg font-semibold mt-3">From:</label>
+          {/* it select the search item  from */}
           <Form.Select
             className="mb-3 w-[300px]"
             value={setSearchState.from}
@@ -33,16 +36,19 @@ export default function BusSearch({ searchState, setSearchState }) {
               }))
             }
           >
+            {/* locations is an array from index.js file for cities ✌️*/}
             {locations.map((data) => (
               <option key={`${data}-source`} value={data}>
                 {data}
               </option>
             ))}
           </Form.Select>
+
+          {/* for destination select */}
           <label className="text-lg font-semibold mt-3">To:</label>
           <Form.Select
             className="mb-3 w-[300px]"
-            value={setSearchState.from}
+            value={setSearchState.to}
             onChange={(e) =>
               setSearchState((prevState) => ({
                 ...prevState,
@@ -56,6 +62,8 @@ export default function BusSearch({ searchState, setSearchState }) {
               </option>
             ))}
           </Form.Select>
+
+          {/* Input for date 😶‍🌫️*/}
           <input
             className="mb-3 w-[300px] border-[1px] border-zinc-400"
             type="date"
@@ -74,10 +82,8 @@ export default function BusSearch({ searchState, setSearchState }) {
         >
           Search
         </button>
-        {/* <BusList/> */}
-        {filteredBus && filteredBus?.length > 1 && (
-          <BusList buses={filteredBus} />
-        )}
+        {/* we have to add date of 2024 year in our Buses data 😭  */}
+        {filteredBus && filteredBus?.length > 0 && <BusList buses={filteredBus} />}
         {filteredBus && filteredBus.length < 1 && <h3>No Buses Found</h3>}
       </div>
     </div>

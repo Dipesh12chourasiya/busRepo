@@ -2,8 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="bg-blue-700 flex items-center justify-center p-[1rem]">
-      <h1 className=" text-lg font-semibold text-white text-[2rem]">
+    // adding Css by tailwind classes
+    <div className="bg-blue-600 flex items-center justify-center p-[1rem]">
+      <h1 className="font-semibold text-white text-lg">
         Bus Ticket Booking App
       </h1>
     </div>
