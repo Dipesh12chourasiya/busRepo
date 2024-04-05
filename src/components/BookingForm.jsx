@@ -84,7 +84,7 @@ export default function BookingForm({ searchState, selectedSeats }) {
           name="To: "
           required
         />
-        <label className="font-medium">Name:</label>
+        <label className="font-medium">Names of Seat Holders:</label>
         <input
           className="rounded-lg px-4 py-2 border border-gray-300 focus:outline-none focus:border-green-500 w-full md:w-[300px]"
           placeholder="Enter your names "
@@ -95,7 +95,7 @@ export default function BookingForm({ searchState, selectedSeats }) {
         <label className="font-medium">Number of Seats:</label>
         <input
           className="rounded-lg px-4 py-2 border border-gray-300 focus:outline-none focus:border-green-500 w-full md:w-[300px]"
-          placeholder="Enter your age"
+          placeholder="Enter number of seats"
           type="number"
           required
           name="Number of Seats:"
